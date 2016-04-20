@@ -22,15 +22,12 @@ public class JDBCExample {
       conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
       //STEP 4: Execute a query
-      System.out.println("Creating database...");
+      System.out.println("Listing databases...");
       stmt = conn.createStatement();
       
-      String sql = "CREATE DATABASE STUDENTS";
-      stmt.executeUpdate(sql);
-      System.out.println("Database created successfully...");
-   }catch(SQLException se){
-      //Handle errors for JDBC
-      se.printStackTrace();
+      String sql = "show databases";
+      stmt.executeQuery(sql);
+      System.out.println("Listing successful");
    }catch(Exception e){
       //Handle errors for Class.forName
       e.printStackTrace();
