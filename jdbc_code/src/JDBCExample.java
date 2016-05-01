@@ -1,5 +1,6 @@
 //STEP 1. Import required packages
 import java.sql.*;
+import java.lang.Thread;
 
 public class JDBCExample {
    // JDBC driver name and database URL
@@ -21,17 +22,26 @@ public class JDBCExample {
       System.out.println("Connecting to database...");
       conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
+System.out.println("Connect to db");
       //STEP 4: Execute a query
-      System.out.println("Listing databases...");
-      stmt = conn.createStatement();
+      while (true) {
+      	System.out.println("Listing databases...");
+      	stmt = conn.createStatement();
       
-      String sql = "show databases";
-      stmt.executeQuery(sql);
-      System.out.println("Listing successful");
+      	String sql = "show databases";
+      	stmt.executeQuery(sql);
+      	System.out.println("Listing successful");
+
+	System.out.println("Sleeping for 1 min...");
+	Thread.sleep(1*60*1000);
+      }
    }catch(Exception e){
+System.out.println("1: " + e.toString());
       //Handle errors for Class.forName
       e.printStackTrace();
    }finally{
+
+System.out.println("2: ");
       //finally block used to close resources
       try{
          if(stmt!=null)
