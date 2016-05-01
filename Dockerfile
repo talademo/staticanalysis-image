@@ -5,7 +5,7 @@ RUN apt-get install -y openjdk-7-jre
 
 WORKDIR /home
 
-LABEL x="c"
+LABEL x="a"
 
 ADD jdbc_code/build/JDBCExample.class JDBCExample.class
 ADD mysql-connector-java-5.1.38-bin.jar mysql-connector-java-5.1.38-bin.jar 
