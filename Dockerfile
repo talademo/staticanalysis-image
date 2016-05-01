@@ -25,22 +25,23 @@ RUN tar -xzf /tmp/jre-8u45-linux-x64.tar.gz -C /opt &&\
            /opt/jdk/lib/missioncontrol \
            /opt/jdk/lib/visualvm \
            /opt/jdk/lib/*javafx* \
-           /opt/jdk/jre/lib/plugin.jar \
-           /opt/jdk/jre/lib/ext/jfxrt.jar \
-           /opt/jdk/jre/bin/javaws \
-           /opt/jdk/jre/lib/javaws.jar \
-           /opt/jdk/jre/lib/desktop \
-           /opt/jdk/jre/plugin \
-           /opt/jdk/jre/lib/deploy* \
-           /opt/jdk/jre/lib/*javafx* \
-           /opt/jdk/jre/lib/*jfx* \
-           /opt/jdk/jre/lib/amd64/libdecora_sse.so \
-           /opt/jdk/jre/lib/amd64/libprism_*.so \
-           /opt/jdk/jre/lib/amd64/libfxplugins.so \
-           /opt/jdk/jre/lib/amd64/libglass.so \
-           /opt/jdk/jre/lib/amd64/libgstreamer-lite.so \
-           /opt/jdk/jre/lib/amd64/libjavafx*.so \
-           /opt/jdk/jre/lib/amd64/libjfx*.so \
+           /opt/jdk/lib/plugin.jar \
+           /opt/jdk/lib/ext/jfxrt.jar \
+           /opt/jdk/bin/javaws \
+           /opt/jdk/lib/javaws.jar \
+           /opt/jdk/lib/desktop \
+           /opt/jdk/plugin \
+           /opt/jdk/lib/deploy* \
+           /opt/jdk/lib/*javafx* \
+           /opt/jdk/lib/*jfx* \
+           /opt/jdk/lib/ext/nashorn.jar \
+           /opt/jdk/lib/amd64/libdecora_sse.so \
+           /opt/jdk/lib/amd64/libprism_*.so \
+           /opt/jdk/lib/amd64/libfxplugins.so \
+           /opt/jdk/lib/amd64/libglass.so \
+           /opt/jdk/lib/amd64/libgstreamer-lite.so \
+           /opt/jdk/lib/amd64/libjavafx*.so \
+           /opt/jdk/lib/amd64/libjfx*.so \
 	   /tmp/jre-8u45-linux-x64.tar.gz \
 	   /tmp/glibc-2.21-r2.apk
 

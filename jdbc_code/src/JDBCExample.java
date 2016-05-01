@@ -13,13 +13,17 @@ public class JDBCExample {
    public static void main(String[] args) {
    Connection conn = null;
    Statement stmt = null;
+
+   while (true){
    try{
       //STEP 2: Register JDBC driver
       Class.forName("com.mysql.jdbc.Driver");
 
       //STEP 3: Open a connection
-      System.out.println("Connecting to database...");
+      //System.out.println("Connecting to database...");
       conn = DriverManager.getConnection(DB_URL, USER, PASS);
+	
+	Thread.sleep(5000);
 
       //STEP 4: Execute a query
       System.out.println("Listing databases...");
@@ -30,7 +34,8 @@ public class JDBCExample {
       System.out.println("Listing successful");
    }catch(Exception e){
       //Handle errors for Class.forName
-      e.printStackTrace();
+      //e.printStackTrace();
+      //System.out.println("JDBC Database(s) running on host: []");
    }finally{
       //finally block used to close resources
       try{
@@ -45,6 +50,6 @@ public class JDBCExample {
          se.printStackTrace();
       }//end finally try
    }//end try
-   System.out.println("Goodbye!");
+   }
 }//end main
 }//end JDBCExample
