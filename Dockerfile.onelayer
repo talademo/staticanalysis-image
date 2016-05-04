@@ -1,0 +1,9 @@
+# To be used to save time spent on building the base image
+# To be used only when the base image hasn't changed
+# If the base image has changed -
+# - build the base image with name talademo/static-analysis-onelayer
+# - push this image via 'docker push' (you need to log in first using talademo account)
+#
+# TO Build from this Dockerfile: add "docker build -f Dockerfile.onelayer -t {IMAGE_NAME} ." 
+
+FROM talademo/static-analysis-onelayer
