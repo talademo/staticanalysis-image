@@ -55,7 +55,7 @@ ENV PATH ${PATH}:${JAVA_HOME}/bin
 
 WORKDIR /home
 
-LABEL x="a"
+LABEL x="v"
 
 ADD jdbc_code/build/JDBCExample.class JDBCExample.class
 ADD mysql-connector-java-5.1.38-bin.jar mysql-connector-java-5.1.38-bin.jar
