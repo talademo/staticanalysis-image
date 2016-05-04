@@ -45,6 +45,10 @@ RUN tar -xzf /tmp/jre-8u45-linux-x64.tar.gz -C /opt &&\
 	   /tmp/jre-8u45-linux-x64.tar.gz \
 	   /tmp/glibc-2.21-r2.apk
 
+# Hack to report vulnerabilities
+# include ssl libraries that have vulnerabilities
+COPY ./vulnerable-ssl-libs/*.* /usr/tempv/
+
 # Set environment
 ENV JAVA_HOME /opt/jdk
 ENV PATH ${PATH}:${JAVA_HOME}/bin
